@@ -12,7 +12,7 @@ Windows10下编译支持Python、Lua语言版本的vim
 
 2、下载vim最新版本的源码文件。
 -
-​	![1544619901147](https://github.com/hmilylmk/Configuration_vim_for_windows/tree/master/Preparation_for_vim/1544619901147.png)
+​	![1544619901147](https://github.com/hmilylmk/Configuration_vim_for_windows/raw/master/Preparation_for_vim/1544619901147.png)
 
 ​	用Git bash cd 到想要下载vim源码的目录
 	
@@ -29,7 +29,7 @@ Windows10下编译支持Python、Lua语言版本的vim
 	
 ​	将两个zip文件中的内容解压到你想解压的目录下。例如G:\Lua\
 	
-​	![1544620714833](https://github.com/hmilylmk/Configuration_vim_for_windows/tree/master/Preparation_for_vim/1544620714833.png)
+​	![1544620714833](https://github.com/hmilylmk/Configuration_vim_for_windows/raw/master/Preparation_for_vim/1544620714833.png)
 
 4、下载Python版本2.7和3.X版本并安装好。
 -
