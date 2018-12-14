@@ -53,7 +53,7 @@ REM But first edit the paths and Python version number.
 REM --- 设置 Vim /src 源码文件的路径 ---
 set VIMSRC=G:\vim81\vim\src
 REM --- 添加 MinGW \bin 路径到 PATH ---
-PATH = G:\mingw64\bin;%PATH%
+PATH = G:\mingw64\bin  %PATH%
 
 REM --- 获得脚本文件当前运行的路径 ---
 set WORKDIR=%~dp0
