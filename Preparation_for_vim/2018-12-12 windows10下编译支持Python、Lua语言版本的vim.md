@@ -16,7 +16,7 @@ Windows10下编译支持Python、Lua语言版本的vim
 
 ​	用Git bash cd 到想要下载vim源码的目录
 	
-	git clone https://github.com/vim/vim
+	git clone https://github.com/vim/vim G:\vim81\vim\src
 
 ​	等待源码下载完成
 
