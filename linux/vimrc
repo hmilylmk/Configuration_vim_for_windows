@@ -226,27 +226,28 @@ let g:Lf_HideHelp = 1
 let g:Lf_StlColorscheme = 'powerline'
 let g:Lf_PreviewResult = {'Function':0, 'BufTag':0}
 
-let g:ale_linters_explicit = 1
 let g:ale_completion_delay = 500
 let g:ale_echo_delay = 20
 let g:ale_lint_delay = 500
-let g:ale_echo_msg_format = '[%linter%] %code: %%s'
 let g:ale_lint_on_text_changed = 'normal'
 let g:ale_lint_on_insert_leave = 1
 let g:airline#extensions#ale#enabled = 1
+let g:ale_lint_on_enter = 0
+let g:ale_set_highlights = 0
+"自定义error和warning图标
+let g:ale_sign_error = '✗'
+let g:ale_sign_warning = '⚡'
+"在vim自带的状态栏中整合ale
+let g:ale_statusline_format = ['✗ %d', '⚡ %d', '✔ OK']
+"显示Linter名称,出错或警告等相关信息
+let g:ale_echo_msg_error_str = 'E'
+let g:ale_echo_msg_warning_str = 'W'
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 
 let g:ale_c_gcc_options = '-Wall -O2 -std=c99'
 let g:ale_cpp_gcc_options = '-Wall -O2 -std=c++14'
 let g:ale_c_cppcheck_options = ''
 let g:ale_cpp_cppcheck_options = ''
-
-let g:ale_sign_error = "\ue009\ue009"
-hi! clear SpellBad
-hi! clear SpellCap
-hi! clear SpellRare
-hi! SpellBad gui=undercurl guisp=red
-hi! SpellCap gui=undercurl guisp=blue
-hi! SpellRare gui=undercurl guisp=magenta
 
 autocmd FileType qf nnoremap <silent><buffer> p :PreviewQuickfix<cr>
 autocmd FileType qf nnoremap <silent><buffer> P :PreviewClose<cr>
@@ -254,10 +255,10 @@ autocmd FileType qf nnoremap <silent><buffer> P :PreviewClose<cr>
 noremap <F4> :PreviewSignature!<cr>
 inoremap <F4> <c-\><c-o>:PreviewSignature!<cr>
 
-noremap <m-u> :PreviewScroll -1<cr>
-noremap <m-d> :PreviewScroll +1<cr>
-inoremap <m-u> <c-\><c-o>:PreviewScroll -1<cr>
-inoremap <m-d> <c-\><c-o>:PreviewScroll +1<cr>
+noremap <m-k> :PreviewScroll -1<cr>
+noremap <m-j> :PreviewScroll +1<cr>
+inoremap <m-k> <c-\><c-o>:PreviewScroll -1<cr>
+inoremap <m-j> <c-\><c-o>:PreviewScroll +1<cr>
 
 
 function! Terminal_MetaMode(mode)
@@ -345,8 +346,13 @@ let g:ycm_filetype_whitelist = {
 			\ "zsh":1,
 			\ }
 let g:ycm_filetype_blacklist = {'text':1, 'markdown':1, 'php':1}
+highlight PMenu ctermfg=0 ctermbg=242 guifg=black guibg=darkgrey
+highlight PMenuSel ctermfg=242 ctermbg=8 guifg=darkgrey guibg=black
 
 " auto complete english words
+let g:vim_dict_dict = [
+    \ '~/.vim/dict',
+    \]
 " 设定需要生效的文件类型，如果是 "*" 的话，代表所有类型
 let g:apc_enable_ft = {'text':1, 'markdown':1, 'php':1}
 

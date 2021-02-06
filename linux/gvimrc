@@ -1,0 +1,19 @@
+" 禁止显示滚动条
+set guioptions-=l
+set guioptions-=L
+set guioptions-=r
+set guioptions-=R
+
+" 禁止显示菜单和工具条
+set guioptions-=m
+set guioptions-=T
+
+" 配色方案
+" set guifont=Monaco:h13
+" set guifont=Ubuntu\ Mono:h16
+" set guifont=*
+let g:solarized_termcolors=256
+set background=dark
+colorscheme solarized
+" colorscheme molokai
+"colorscheme lyla
